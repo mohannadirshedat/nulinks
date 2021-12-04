@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+
+<style type="text/css">
+	body { font-family: 'Montserrat', sans-serif ; background:#eff0f2;}
+
+
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPRO.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPROEXTRALIGHT.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 350;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPROLIGHT.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 450;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPROBOOK.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPROMEDIUM.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPROBOLD.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPROHEAVY.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mark Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Mark Pro'), url('https://fonts.cdnfonts.com/s/45235/MARKPROBLACK.woff') format('woff');
+}
+
+
+.login-logo-img {margin-bottom: 35px; float: left; width: 100%; text-align: center;}
+
+.signin-txtbx1 {position: relative;z-index: 9999; text-align: right;font-size: 14px;color: #637a87;}
+
+.signin-txtbx1 p a {color: #2001f4; font-weight: 600;}
+
+.register-form-bx1 {position: absolute;top: 50%;width: 100%;left: 50%;transform: translateX(-50%) translateY(-50%);}
+
+.register-form-bx1 .card-registration {background: none; border: none;}
+.register-form-bx1 .card-registration input {border: none;height: 45px;border-radius: 10px; font-size: 13px; color: #000; font-weight: 600;}
+.register-form-bx1 .card-registration input::placeholder {color: #97a8b0; font-weight: 300;}
+.register-form-bx1 .card-registration input:focus{box-shadow: none; outline: none;}
+.register-form-bx1 .card-registration label {color: #98a8b0;font-size: 10px;text-transform: uppercase; font-weight: 500;}
+.register-form-bx1 .card-registration label a {color: #2001f4; font-weight: 600;}
+
+.register-form-bx1 .card-registration h4 {font-family: 'Mark Pro'; float: left; width: 100%; text-align: center; padding-bottom: 35px !important; font-size: 22px; font-weight: 600;}
+
+.register-form-bx1 .card-registration .mb-4 {margin-bottom: 10px !important;}
+
+.register-form-bx1 .card-registration .p-md-5 {padding:2rem 5rem !important; margin: 0 auto; max-width: 680px;}
+
+.register-code01 {margin-top: 20px;}
+.register-code01 input {background: #c8c8f5; }
+.register-code01 input::placeholder {color: #0e0d95 !important; font-weight: 500 !important;}
+.register-code01 .form-outline {position: relative;}
+.register-code01 .form-outline::after {content: 'OPTIONAL';position: absolute;top: 14px; right: 12px; font-size: 10px; color: #fff;}
+
+.iagreeto-row {padding: 10px 25px;}
+.iagreeto-row input {height: unset !important;}
+
+
+button.register-btn1 {float: none;border: solid 1px #2001f4; width: auto; background: #2001f4; padding: 10px 60px;margin: 20px auto 0 !important;font-size: 18px; border-radius: 30px;}
+
+button.register-btn1:hover {border: solid 1px #ff53ee; background: #ff53ee;}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+.register-form-bx1 {position: unset; transform:unset;}
+.register-form-bx1 .card-registration .p-md-5 {padding: 0; margin: 0;}
+
+
+}
+
+
+
+
+
+</style>
+
+
+
+<body class="register-page">
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+  	<div class="signin-txtbx1">
+  		<p>Already have an account? <a href="login.html">Sign in</a></p>
+  	</div>
+	    <div class="row justify-content-center align-items-center h-100 register-form-bx1">
+	      <div class="col-12 col-lg-9 col-xl-7">
+	        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+	          <div class="card-body p-4 p-md-5">
+	          <div class="login-logo-img"><a href="home.html"> <img src="images/register-logo-img.png"></a></div>
+	            <h4 class="mb-4 pb-2 pb-md-0 mb-md-5">Let's start with creating your account</h4>
+	            <form>
+	              <div class="row">
+	                <div class="col-md-6 mb-4">
+	                  <div class="form-outline">
+	                  	<label class="form-label" for="firstName">First Name</label>
+	                    <input type="text" id="firstName" class="form-control form-control-lg" placeholder="First Name" />
+	                  </div>
+	                </div>
+	                <div class="col-md-6 mb-4">
+	                  <div class="form-outline">
+	                  	 <label class="form-label" for="lastName">Last Name</label>
+	                    <input type="text" id="lastName" class="form-control form-control-lg" placeholder="Last Name" />
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="row">
+	                <div class="col-12 mb-4">
+	                  <label class="form-label select-label">User Name</label>
+	                   <input type="text" id="UsertName" class="form-control form-control-lg" placeholder="User Name" />
+	                </div>
+	              </div>
+	              <div class="row">
+		              <div class="col-12 mb-4">
+		                  <div class="form-outline">
+		                  	<label class="form-label" for="emailAddress">Email</label>
+		                    <input type="email" id="emailAddress" class="form-control form-control-lg" placeholder="abc@criptocoins.com" />
+		                  </div>
+		                </div>
+		          </div>
+		          <div class="row">
+	                <div class="col-md-6 mb-4">
+	                  <div class="form-outline">
+	                  	<label class="form-label" for="form3Example4cg">Password</label>
+	                  	<input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password" />
+	                  </div>
+	                </div>
+	                <div class="col-md-6 mb-4">
+	                  <div class="form-outline">
+	                  	<label class="form-label" for="form3Example4cdg">Repeat your password</label>
+	                  	 <input type="password" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Repeat your password" />
+	                  </div>
+	                </div>
+	              </div>
+		          <div class="row register-code01">
+	                <div class="col-12 mb-4">
+	                  <div class="form-outline">
+	                    <input type="text" id="form3Example1w" class="form-control form-control-lg" placeholder="Insert invite code" />
+	                  </div>
+
+	                </div>
+	              </div>
+	              <div class="row iagreeto-row">
+		              <div class="col-12 mb-4">
+		                  <div class="form-outline">
+		                  	<input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="form2Example3cg"
+                  />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree to  <a href="#!" class="text-body"><u>Terms & Conditions</u></a>
+                  </label>
+                  
+		                  </div>
+		                </div>
+		          </div>
+		          <div class="row">
+		              <div class="col-12 mb-4">
+		              	<button type="button" class="btn btn-success register-btn1 btn-block btn-lg gradient-custom-4 text-body">Create account & continue</button>
+		              </div>
+		          </div>
+	            </form>
+	       </div>
+	   	  </div>
+		</div>
+      </div>
+ </div>
+</section>
+
+
+
+</body>
+</html>
+
+

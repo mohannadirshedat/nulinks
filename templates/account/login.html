@@ -1,0 +1,43 @@
+{% extends "account/base.html" %}
+
+{% load static i18n crispy_forms_tags %}
+
+
+{% load account socialaccount %}
+
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+ <div class="row">
+            <div class="col-xl-5 d-none d-xl-block p-0 vh-100 bg-image-cover bg-no-repeat" style="background-image: url(https://assets.staticimg.com/public-web/2.0.14/static/bg.235513a3.png);"></div>
+            <div class="col-xl-7 vh-100 align-items-center d-flex bg-white rounded-3 overflow-hidden">
+                <div class="card shadow-none border-0 ms-auto me-auto login-card">
+                    <div class="card-body rounded-0 text-left">
+                        <h2 class="fw-700 display1-size display2-md-size mb-3">{% trans 'Login into' %} <br>{% trans 'your account' %}</h2>
+                      <form class="login" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  {{ form|crispy }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  <button class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0" type="submit">{% trans "Sign In" %}</button>
+</form>
+
+                        <div class="col-sm-12 p-0 text-left">
+                            <h6 class="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32">Haven’t registered? <a href="{% url 'account_signup' %}" class="fw-700 ms-1">{% trans 'Register' %}</a></h6>
+                        </div>
+                        <div class="col-sm-12 p-0 text-center mt-2">
+
+                            <h6 class="mb-0 d-inline-block bg-white fw-500 font-xsss text-grey-500 mb-3">{% trans 'Or, Sign in with your social account' %} </h6>
+                            <div class="form-group mb-1"><a href="http://localhost:8000/accounts/google/login/?process=login" class="form-control text-left style2-input text-white fw-600 bg-facebook border-0 p-0 mb-2"><img src="{% static 'images/icon-1.png' %}" alt="icon" class="ms-2 w40 mb-1 me-5"> Sign in with Google</a></div>
+                            <div class="form-group mb-1"><a href="http://localhost:8000/accounts/facebook/login/?process=login" class="form-control text-left style2-input text-white fw-600 bg-twiiter border-0 p-0 "><img src="{% static 'images/icon-3.png' %}" alt="icon" class="ms-2 w40 mb-1 me-5"> Sign in with Facebook</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

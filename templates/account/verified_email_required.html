@@ -1,0 +1,40 @@
+{% extends "account/base.html" %}
+
+{% load static i18n crispy_forms_tags %}
+
+
+{% load account socialaccount %}
+
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xl-5 d-none d-xl-block p-0 vh-100 bg-image-cover bg-no-repeat"
+       style="background-image: url(https://assets.staticimg.com/public-web/2.0.14/static/bg.235513a3.png);"></div>
+  <div class="col-xl-7 vh-100 align-items-center d-flex bg-white rounded-3 overflow-hidden">
+    <div class="card shadow-none border-0 ms-auto me-auto login-card">
+      <div class="card-body rounded-0 text-left">
+        <h1>{% trans "Verify Your E-mail Address" %}</h1>
+
+        {% url 'account_email' as email_url %}
+
+        <p>{% blocktrans %}This part of the site requires us to verify that
+          you are who you claim to be. For this purpose, we require that you
+          verify ownership of your e-mail address. {% endblocktrans %}</p>
+
+        <p>{% blocktrans %}We have sent an e-mail to you for
+          verification. Please click on the link inside this e-mail. Please
+          contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+
+        <p>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}">change your e-mail address</a>.{%
+          endblocktrans %}</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

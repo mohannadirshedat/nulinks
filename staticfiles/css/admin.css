@@ -1,0 +1,18 @@
+
+.nav-wrapper, .nav-wrapper .inner {
+    background: #2C4251;
+}
+
+.nav-search input {
+
+    background-color: #2C4251;
+}
+
+.nav-main .account {
+    background: #2C4251;
+    color: #ccc;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+}
+

@@ -1,0 +1,40 @@
+version: '3.4'
+
+volumes:
+  caddy: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/production/django/Dockerfile
+    env_file: .env
+    depends_on:
+      - redis
+    command: daphne -b 0.0.0.0 -p 8000 config.asgi:application
+
+  worker:
+    build:
+      context: .
+      dockerfile: ./compose/production/django/Dockerfile
+    command: python manage.py runserver
+    env_file: .env
+    depends_on:
+      - redis
+
+
+  caddy:
+    build:
+      context: .
+      dockerfile: ./compose/production/caddy/Dockerfile
+    depends_on:
+      - django
+    volumes:
+      - caddy:/root/.caddy
+    env_file: .env
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:443:443"
+
+  redis:
+    image: redis:5.0

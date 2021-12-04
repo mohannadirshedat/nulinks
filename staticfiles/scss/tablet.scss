@@ -1,0 +1,31 @@
+@media (max-width:991px){
+    .nav-header{
+        display: flex;
+        justify-content: space-between;
+        .nav-top{
+            width: auto;
+        }
+    }
+    .app-footer{
+        justify-content: space-around;
+    }
+    .reverse-on-mobile{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ask-btn{
+        margin-left: auto;
+    }
+    .post-action{
+        display: none !important;
+        &.mobile{
+            display: block !important;
+            span.fa{                
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (min-width:480px ) and (max-width:991px){
+    
+}

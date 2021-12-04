@@ -1,0 +1,52 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block head_title %}{% endblock %}</title>
+  {% block extra_head %}
+  {% endblock %}
+
+  <link rel="stylesheet" href="{% static 'login_css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'login_css/feather.css' %}">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/fav.png' %}">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="{% static 'login_css/style.css' %}">
+
+</head>
+
+<body class="color-theme-blue">
+<div class="preloader"></div>
+
+<div class="main-wrap">
+
+
+  <div class="nav-header bg-transparent shadow-none border-0">
+    <div class="nav-top w-100">
+      <a href="{% url 'home' %}"><img src="{% static 'images/NL_white_flat.png' %}" width="200" height="auto"
+                                      class="logo"> </a>
+      <a href="{% url 'account_login' %}"
+         class="header-btn d-none d-lg-block bg-dark fw-500 text-white font-xsss p-3 ms-auto w100 text-center lh-20 rounded-xl"
+         data-toggle="modal" data-target="#Modallogin">Login</a>
+      <a href="{% url 'account_signup' %}"
+         class="header-btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-2 w100 text-center lh-20 rounded-xl"
+         data-toggle="modal" data-target="#Modalregister">Register</a>
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+{% block content %}
+{% endblock %}
+
+</div>
+</body>
+<script src="{% static 'login_js/plugin.js' %}"></script>
+<script src="{% static 'login_js/scripts.js' %}"></script>
+
+</html>

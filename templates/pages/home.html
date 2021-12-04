@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load static i18n  %}
+{% block content %}
+
+	<div class="main-content right-chat-active container">
+		<div class="middle-sidebar-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="start-post-bx1 post-comment">
+							<div class="slick-custom-initialize" data-slick='{"slidesToShow":6, "slidesToScroll":1,  "responsive":[
+							{"breakpoint":1024,"settings":{"slidesToShow": 3}},
+							{"breakpoint":768,"settings":{"slidesToShow": 2}},
+							{"breakpoint":480,"settings":{"slidesToShow": 1}}
+							]}'>
+									<div class="slide-user-bx">
+										<a href="mentor-profile.html">
+											<div class="user-img-bx1"><img src="{% static 'images/slid-img.jpg' %}" /></div>
+											<h3>Your Story</h3>
+										</a>
+									</div>
+									<div class="slide-user-bx">
+										<a href="mentor-profile.html">
+											<div class="user-img-bx1"><img src="{% static 'images/img2.jpg' %}" /></div>
+											<h3>ClaireMel</h3>
+										</a>
+									</div>
+									<div class="slide-user-bx">
+										<a href="mentor-profile.html">
+											<div class="user-img-bx1"><img src="{% static 'images/img3.png' %}" /></div>
+											<h3>John_Basset</h3>
+										</a>
+									</div>
+									<div class="slide-user-bx">
+										<a href="mentor-profile.html">
+											<div class="user-img-bx1"><img src="{% static 'images/img4.png' %}" /></div>
+											<h3>Melissa_Yr</h3>
+										</a>
+									</div>
+									<div class="slide-user-bx">
+										<a href="mentor-profile.html">
+											<div class="user-img-bx1"><img src="{% static 'images/slid-img.jpg' %}" /></div>
+											<h3>FinanceMark</h3>
+										</a>
+									</div>
+									<div class="slide-user-bx">
+										<a href="mentor-profile.html">
+											<div class="user-img-bx1"><img src="{% static 'images/img2.jpg' %}" /></div>
+											<h3>BethGibbs</h3>
+										</a>
+									</div>
+									<div class="slide-user-bx">
+										<a href="mentor-profile.html">
+											<div class="user-img-bx1"><img src="{% static 'images/img3.png' %}" /></div>
+											<h3>Your Story</h3>
+										</a>
+									</div>
+								</div>
+
+						</div>
+
+
+					</div>
+					<div class="col-md-5">
+						<div class="gainerandloser-bx1 desktop-screen">
+							<h3>Gainers & Losers <a href="#">See all</a></h2>
+							<h4>Based on Top 100 coins</h4>
+							<div class="gainer-row">
+								<div class="gainer-bx">
+									<div class="coin-img"><img src="{% static 'images/bitcoin.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx">
+										2,60%
+									</div>
+								</div>
+								<div class="gainer-bx2">
+									<div class="coin-img"><img src="{% static 'images/theader.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx">
+										2,60%
+									</div>
+								</div>
+							</div>
+							<div class="gainer-row">
+								<div class="gainer-bx">
+									<div class="coin-img"><img src="{% static 'images/litcoin.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx">
+										2,60%
+									</div>
+								</div>
+								<div class="gainer-bx2">
+									<div class="coin-img"><img src="{% static 'images/etherum.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx">
+										2,60%
+									</div>
+								</div>
+							</div>
+
+							<div class="gainer-row looser">
+								<div class="gainer-bx">
+									<div class="coin-img"><img src="{% static 'images/bitcoin.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx red">
+										2,60%
+									</div>
+								</div>
+								<div class="gainer-bx2 looser">
+									<div class="coin-img"><img src="{% static 'images/theader.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx red">
+										2,60%
+									</div>
+								</div>
+							</div>
+							<div class="gainer-row">
+								<div class="gainer-bx looser">
+									<div class="coin-img"><img src="{% static 'images/litcoin.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx red">
+										2,60%
+									</div>
+								</div>
+								<div class="gainer-bx2 looser">
+									<div class="coin-img"><img src="{% static 'images/etherum.png' %}"></div>
+									<h3>Bitcoin</h3>
+									<p>$ 38,240.05</p>
+									<div class="persantage-bx red">
+										2,60%
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="imges-three">
+							<img src="{% static 'images/business.png' %}" />
+							<img src="{% static 'images/coin.png' %}" />
+							<img src="{% static 'images/currency.png' %}" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "account/base.html" %}
+
+{% load static i18n crispy_forms_tags %}
+
+
+{% load account socialaccount %}
+
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xl-5 d-none d-xl-block p-0 vh-100 bg-image-cover bg-no-repeat"
+       style="background-image: url(https://assets.staticimg.com/public-web/2.0.14/static/bg.235513a3.png);"></div>
+  <div class="col-xl-7 vh-100 align-items-center d-flex bg-white rounded-3 overflow-hidden">
+    <div class="card shadow-none border-0 ms-auto me-auto login-card">
+      <div class="card-body rounded-0 text-left">
+        <h2 class="fw-700 display1-size display2-md-size mb-3">{% trans "Sign Out" %} </h2>
+
+
+        <p>{% trans 'Are you sure you want to sign out?' %}</p>
+
+        <form method="post" action="{% url 'account_logout' %}">
+          {% csrf_token %}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+          {% endif %}
+          <button class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0" type="submit">{% trans 'Sign Out' %}
+          </button>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
